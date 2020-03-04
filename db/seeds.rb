@@ -1,0 +1,53 @@
+Band.destroy_all
+b1=Band.create(name: "Kiss", genre: "Rock")
+b2=Band.create(name: "Future", genre: "Rap")
+b3=Band.create(name: "White Stripes", genre: "Rock")
+b4=Band.create(name: "J. Cole", genre: "Rap")
+b5=Band.create(name: "Billy Ray Cyrus", genre: "Country")
+b6=Band.create(name: "Coldplay", genre: "Alternative")
+b7=Band.create(name: "Chris Brown", genre: "R&B")
+b8=Band.create(name: "Steve Aoki", genre: "EDM")
+b9=Band.create(name: "Beyonce", genre: "R&B")
+b10=Band.create(name: "2Pac", genre: "RAP")
+
+Venue.destroy_all
+v1=Venue.create(city: "New York City", name_of_venue: "Madison Square Garden")
+v2=Venue.create(city: "New York City", name_of_venue: "Barclays Center")
+v3=Venue.create(city: "Los Angelas", name_of_venue: "Staples Center")
+v4=Venue.create(city: "Houston ", name_of_venue: "Toyota Center")
+v5=Venue.create(city: "Miami", name_of_venue: "American Airlines Arena")
+v6=Venue.create(city: "Philadelphia", name_of_venue: "Wells Fargo Center")
+v7=Venue.create(city: "Denver", name_of_venue: "Pepsi Center")
+
+Concert.destroy_all
+c1=Concert.create(title:"Kiss Tour", band_id: b1.id, venue_id: v7.id)
+c2=Concert.create(title:"Pluto Tour",band_id:b2.id,venue_id:v5.id)
+c3=Concert.create(title:"Indigo Tour",band_id:b7.id,venue_id:v2.id)
+c4=Concert.create(title:"On The Run Tour",band_id:b9.id,venue_id:v3.id)
+c5=Concert.create(title:"The White Stripes Tour",band_id:b3.id,venue_id:v4.id)
+c6=Concert.create(title:"KOD Tour",band_id:b4.id,venue_id:v1.id)
+c7=Concert.create(title:"Old Town Road",band_id:b5.id,venue_id:v6.id)
+c8=Concert.create(title:"White Blood Cells",band_id:b6.id,venue_id:v7.id)
+c9=Concert.create(title:"Ultra",band_id:b8.id,venue_id:v5.id)
+c10=Concert.create(title:"Makaveli Tour",band_id:b10.id,venue_id:v3.id)
+
+User.destroy_all
+u1=User.create(name: "David", age: 28)
+u2=User.create(name: "Ramzy", age: 24)
+u3=User.create(name: "Tashawn", age: 31)
+u4=User.create(name: "Jeff", age: 27)
+u5=User.create(name: "Gaby", age: 60)
+u6=User.create(name: "Chett", age: 32)
+u7=User.create(name: "Brianna", age: 99)
+
+Ticket.destroy_all
+t1=Ticket.create(price: 99, section: 1, user_id:u1.id, concert_id:c1.id)
+t2=Ticket.create(price: 20, section: 14, user_id:u2.id, concert_id:c2.id)
+t3=Ticket.create(price: 70, section: 7, user_id:u3.id, concert_id:c3.id)
+t4=Ticket.create(price: 35, section: 12, user_id:u4.id, concert_id:c4.id)
+t5=Ticket.create(price: 50, section: 8, user_id:u5.id, concert_id:c5.id)
+t6=Ticket.create(price: 120, section: 5, user_id:u6.id, concert_id:c6.id)
+t7=Ticket.create(price: 400, section: 1, user_id:u7.id, concert_id:c7.id)
+t8=Ticket.create(price: 600, section: 1, user_id:u1.id, concert_id:c8.id)
+t9=Ticket.create(price: 22, section: 19, user_id:u2.id, concert_id:c9.id)
+t10=Ticket.create(price: 85, section: 11, user_id:u3.id, concert_id:c10.id)
